@@ -60,7 +60,7 @@ code {
 .hero-grid { display: flex; align-items: center; gap: 56px; }
 .hero-text { flex: 1; min-width: 0; }
 .profile-photo {
-  order: 2; flex: none; width: 200px; height: 200px; border-radius: 50%; object-fit: cover;
+  order: 2; flex: none; width: 192px; height: 240px; border-radius: 16px; object-fit: cover;
   border: 5px solid #fff; box-shadow: 0 8px 28px rgba(31,58,138,.16);
 }
 body[data-photo="off"] .profile-photo { display: none; }
@@ -168,7 +168,7 @@ body[data-focus="be"] .points > [data-side="be"] { order: -1; }
   .media-row { grid-template-columns: 1fr 1fr; }
   .before-after { grid-template-columns: 1fr; }
   .hero-grid { flex-direction: column; align-items: flex-start; gap: 28px; }
-  .profile-photo { order: 0; width: 120px; height: 120px; }
+  .profile-photo { order: 0; width: 112px; height: 140px; border-radius: 12px; }
 }
 
 /* ───────── 인쇄(PDF) ─────────
@@ -178,7 +178,7 @@ body[data-focus="be"] .points > [data-side="be"] { order: -1; }
   body { font-size: 10.5pt; }
   .nav, .hero-links, .footer, video { display: none !important; }
   .hero { padding: 0 0 16px; background: none; }
-  .profile-photo { display: none; width: 30mm; height: 30mm; box-shadow: none; border: 0; }
+  .profile-photo { display: none; width: 30mm; height: 37.5mm; border-radius: 3mm; box-shadow: none; border: 0; }
   body[data-photo="on"] .profile-photo { display: block; }
   .section { padding: 18px 0; }
   .project { break-before: page; }
