@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>신혜지 | 풀스택 개발자 포트폴리오</title>
+  <meta name="description" content="화면에서 시작해 데이터까지 직접 연결하는 개발자 신혜지의 포트폴리오">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-focus="all">
+
+<!-- ───────────── 상단 내비게이션 ───────────── -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="#top" class="nav-logo">신혜지</a>
+    <nav class="nav-links">
+      <a href="#skills">기술</a>
+      <a href="#safemate">도와줘, 맵!</a>
+      <a href="#refrigerator">냉장고 요리사</a>
+      <a href="#delay">Delay Detective</a>
+      <a href="#contact">연락처</a>
+    </nav>
+    <div class="focus-toggle" role="group" aria-label="보기 기준">
+      <button data-set-focus="all" class="active">전체</button>
+      <button data-set-focus="fe">Frontend</button>
+      <button data-set-focus="be">Backend</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ───────────── 소개 ───────────── -->
+<section class="hero">
+  <div class="container">
+    <p class="eyebrow">Full-Stack Developer</p>
+    <h1>화면에서 시작해<br>데이터까지 직접 연결하는 개발자, <span class="accent">신혜지</span>입니다.</h1>
+    <p class="hero-sub">
+      실제 도로망 데이터로 안심 경로를 계산하는 지도 서비스부터, 사용성 평가로 다시 다듬은 모바일 앱,
+      오프라인에서도 동작하는 AI 할 일 앱까지 — 문제를 정의하고 끝까지 검증하는 과정을 소개합니다.
+    </p>
+    <div class="hero-links">
+      <a class="btn primary" href="https://github.com/hyeji203" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="#contact">연락하기</a>
+      <!-- TODO: PDF 버전 완성 후 링크 연결 -->
+      <a class="btn" href="#" onclick="window.print(); return false;">PDF로 저장</a>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── 기술 스택 ───────────── -->
+<section id="skills" class="section">
+  <div class="container">
+    <h2 class="section-title">기술 스택</h2>
+    <div class="skills-grid">
+      <div class="skill-card" data-side="fe">
+        <h3>Frontend</h3>
+        <ul class="chips">
+          <li>React (Vite)</li><li>Flutter / Dart</li><li>Provider</li>
+          <li>Kakao Map SDK</li><li>PWA</li>
+        </ul>
+      </div>
+      <div class="skill-card" data-side="be">
+        <h3>Backend</h3>
+        <ul class="chips">
+          <li>Spring Boot</li><li>Spring Security · JWT</li><li>MySQL</li><li>Oracle</li>
+          <li>Firebase Firestore</li><li>Hive</li><li>WebSocket (STOMP)</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>Data · AI</h3>
+        <ul class="chips">
+          <li>Python (OSM · 공공데이터 가공)</li><li>Gemini Vision</li><li>Groq · Llama 3.3</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>Test · Tools</h3>
+        <ul class="chips">
+          <li>Playwright</li><li>Git · GitHub</li><li>Claude Code (서브에이전트)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── 프로젝트 1: safemate-map (대표) ───────────── -->
+<section id="safemate" class="section project featured">
+  <div class="container">
+    <div class="project-head">
+      <span class="badge featured-badge">대표 프로젝트 · 졸업작품</span>
+      <h2>도와줘, 맵! <small>(SafeMate)</small></h2>
+      <p class="tagline">가로등과 사용자 제보로 <strong>밤길 위험도</strong>를 계산해, 최단경로와 <strong>안심경로</strong>를 함께 안내하는 웹 지도 서비스</p>
+      <dl class="meta">
+        <div><dt>기간</dt><dd>2026.09 ~ 2026.11</dd></div>
+        <div><dt>인원</dt><dd>3인 팀</dd></div>
+        <div><dt>역할</dt><dd>안심 경로 탐색 전체 (데이터 → 알고리즘·API → 지도 시각화)</dd></div>
+        <div><dt>스택</dt><dd>React · Spring Boot · MySQL · WebSocket · Python</dd></div>
+      </dl>
+      <div class="links">
+        <a href="https://github.com/2024136033Hub/safemate-map" target="_blank" rel="noopener">GitHub (팀 저장소)</a>
+        <!-- TODO: 라이브 데모 배포 후 링크 추가 -->
+      </div>
+    </div>
+
+    <div class="media-row">
+      <!-- TODO: 지도 화면 스크린샷 (최단 회색 + 안심 노란색 경로가 함께 보이는 화면) -->
+      <div class="ph">스크린샷 준비 중<br><small>최단·안심 경로 동시 표시 화면</small></div>
+      <!-- TODO: 지하철 출구 안내 / 실시간 재탐색 화면 -->
+      <div class="ph">스크린샷 준비 중<br><small>지하철 출구 안내 화면</small></div>
+      <div class="ph">스크린샷 준비 중<br><small>제보 → 경로 재탐색 화면</small></div>
+    </div>
+
+    <div class="points">
+      <div class="point-card" data-side="be">
+        <h3>Backend 포인트</h3>
+        <ul>
+          <li><strong>같은 다익스트라에 비용 함수만 바꿔</strong> 최단경로와 안심경로를 한 번에 계산<br>
+            <code>안심 비용 = 도보 비용 × (1 + 2.0 × 위험도)</code></li>
+          <li>도로 종류별 보행 비용 설계 (보행자길 0.9배 ~ 큰 차도 2.0배, 계단 2.5배)</li>
+          <li>보고 있는 경로 <strong>50m 안에 새 제보</strong>가 들어오면 안심경로를 실시간으로 다시 찾고, 그동안 기존 경로 유지</li>
+          <li>출발·도착이 지하철역이면 가장 빠른 출구(계단/에스컬레이터)로 안내</li>
+          <li>카카오 로컬 API 키를 서버에만 두고 장소 검색 API 제공</li>
+        </ul>
+      </div>
+      <div class="point-card" data-side="fe">
+        <h3>Frontend 포인트</h3>
+        <ul>
+          <li>카카오맵 위에 최단(회색)·안심(노란색) 경로를 <strong>실제 도로 곡선 그대로</strong> 함께 표시</li>
+          <li>장소 검색창, 장소 정보 카드, 출발/도착 바, 경로 카드, 검색 기록 구현</li>
+          <li>도착지만 정하면 현재 위치에서 출발, 확대했을 때만 가로등 마커 표시</li>
+          <li>PWA 적용, 휴대폰 폭 고정과 노치·홈 바(safe-area) 여백 대응</li>
+        </ul>
+      </div>
+      <div class="point-card">
+        <h3>Data 포인트</h3>
+        <ul>
+          <li>OpenStreetMap에서 실제 도로망 그래프 생성 (노드 약 3,630개 · 간선 약 5,890개)</li>
+          <li>성남시 보안등 공공데이터와 횡단보도 좌표를 가공해 위험도 계산에 반영</li>
+          <li>서버 시작 시 CSV를 DB에 자동 적재, CSV가 바뀐 경우에만 다시 적재</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="story">
+      <h3>문제 해결: 실제 지도에서 발견한 경로 오류 고치기</h3>
+      <p>공개 지도 데이터(OSM)는 실제 걸을 수 있는 길과 다른 부분이 있어서, 시연 지역을 직접 확인하며 경로 오류를 찾아 고쳤습니다.</p>
+      <div class="before-after">
+        <div><span class="tag">문제</span>캠퍼스 도로가 OSM에서 큰길과 끊겨 있어, 남쪽 교차로까지 돌아가는 경로가 나옴</div>
+        <div><span class="tag good">개선</span>횡단보도 건너편 15m 안의 끊긴 길을 잇는 연결 간선 생성 → <strong>600m → 466m</strong></div>
+        <div><span class="tag">문제</span>보도에 올린 제보 1건이 15m 옆 캠퍼스 도로 120m 전체를 위험 구간으로 만듦</div>
+        <div><span class="tag good">개선</span>반경 안의 모든 길이 아니라 <strong>가장 가까운 길에만</strong> 제보를 반영</div>
+        <div><span class="tag">문제</span>안심경로가 최단경로보다 더 짧게 표시되는 모순</div>
+        <div><span class="tag good">개선</span>안심경로가 거리상으로도 더 나으면 최단경로도 그 길을 쓰도록 수정</div>
+      </div>
+      <p class="note">'어두운 길' 판단 기준도 가로등 개수 → 도로 길이 대비 밀도 → 25m 간격 기준으로 세 차례 다듬었습니다.</p>
+      <!-- TODO: 어두움 기준을 바꾼 이유를 본인 말로 한두 문장 보완 -->
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── 프로젝트 2: refrigerator-app ───────────── -->
+<section id="refrigerator" class="section project">
+  <div class="container">
+    <div class="project-head">
+      <span class="badge">팀 프로젝트 → 개인 개선</span>
+      <h2>냉장고 요리사</h2>
+      <p class="tagline">냉장고 사진을 찍으면 AI가 재료를 인식하고, 알레르기를 고려해 레시피를 추천하는 모바일 앱</p>
+      <dl class="meta">
+        <div><dt>기간</dt><dd>2026.05 ~ 06 (팀) · 2026.06 ~ 10 (개인 개선)</dd></div>
+        <div><dt>인원</dt><dd>3인 팀 → 개인</dd></div>
+        <div><dt>역할</dt><dd>초기 구조 설계, 팀 종료 후 사용성 평가와 기능 개선 단독 진행</dd></div>
+        <div><dt>스택</dt><dd>Flutter · Spring Boot · Spring Security(JWT) · Oracle · Gemini</dd></div>
+      </dl>
+      <div class="links">
+        <a href="https://github.com/hyeji203/refrigerator-app-personal" target="_blank" rel="noopener">GitHub (개인 개선)</a>
+        <a href="https://github.com/hyeji203/refrigerator-app" target="_blank" rel="noopener">GitHub (팀 원본)</a>
+      </div>
+    </div>
+
+    <div class="media-row">
+      <!-- TODO: 스캔 단계 화면 / 레시피 상세(보유·부족 재료) / 개선 전후 비교 -->
+      <div class="ph">스크린샷 준비 중<br><small>AI 스캔 단계 화면</small></div>
+      <div class="ph">스크린샷 준비 중<br><small>레시피 상세 (보유·부족 재료)</small></div>
+      <div class="ph">스크린샷 준비 중<br><small>UI 개선 전/후 비교</small></div>
+    </div>
+
+    <div class="story">
+      <h3>팀 프로젝트가 끝난 뒤, 사용성을 직접 평가하고 다시 고쳤습니다</h3>
+      <p>닐슨 휴리스틱으로 평가표를 만들어 문제에 우선순위를 매기고, 1~8번을 개인 저장소에서 개선했습니다.</p>
+      <div class="before-after">
+        <div><span class="tag">문제</span>알림 권한을 앱 첫 실행 때 이유 없이 요청</div>
+        <div><span class="tag good">개선</span>첫 유통기한을 등록할 때 필요한 이유를 설명하고 요청</div>
+        <div><span class="tag">문제</span>오류 메시지가 원인만 알려주고 해결 방법이 없음</div>
+        <div><span class="tag good">개선</span>"원인 + 해결 방법" 문장으로 통일, 다시 시도 버튼 추가</div>
+        <div><span class="tag">문제</span>스캔 중 다른 탭으로 가면 분석 상태가 사라짐</div>
+        <div><span class="tag good">개선</span>상태 유지, 업로드 진행률·경과 시간 표시, 분석 취소 추가</div>
+      </div>
+    </div>
+
+    <div class="points">
+      <div class="point-card" data-side="fe">
+        <h3>Frontend 포인트</h3>
+        <ul>
+          <li>스캔 흐름을 단계별 위젯으로 분리 (선택 → 미리보기 → 분석 → 검토 → 완료)</li>
+          <li>회원가입 필드별 실시간 검증, 알레르기 칩 선택과 자동완성</li>
+          <li>냉장고 목록 정렬(임박순·이름순·최근순)과 유통기한 임박 배지, 첫 실행 온보딩</li>
+          <li>유통기한 3일·1일 전 로컬 푸시 알림과 매일 오전 9시 리마인더</li>
+        </ul>
+      </div>
+      <div class="point-card" data-side="be">
+        <h3>Backend 포인트</h3>
+        <ul>
+          <li>AI 인식 결과를 바로 저장하지 않고 <strong>사용자가 검토·확정한 뒤 저장</strong>하도록 설계</li>
+          <li>알레르기 키워드 매칭: 한 글자 키워드(게·밀·콩·굴)는 재료명 맨 앞에서만 매칭해 오탐 감소</li>
+          <li>북마크하지 않은 추천 레시피는 15개까지만 유지하는 자동 정리</li>
+          <li>아이디·이메일 실시간 중복 확인 API, JWT 인증</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── 프로젝트 3: delay-detective ───────────── -->
+<section id="delay" class="section project">
+  <div class="container">
+    <div class="project-head">
+      <span class="badge">개인 프로젝트</span>
+      <h2>Delay Detective</h2>
+      <p class="tagline">미루는 일을 감지하고, AI가 <strong>왜 미루는지 물어본 뒤</strong> 작은 단위로 다시 쪼개주는 할 일 앱</p>
+      <dl class="meta">
+        <div><dt>기간</dt><dd>2026.05 ~ 06 (6주)</dd></div>
+        <div><dt>인원</dt><dd>개인</dd></div>
+        <div><dt>역할</dt><dd>기획 · 설계 · 개발 · 테스트 전체 (AI 서브에이전트 5종 지휘)</dd></div>
+        <div><dt>스택</dt><dd>Flutter · Provider · Hive · Firebase · Groq(Llama 3.3) · Playwright</dd></div>
+      </dl>
+      <div class="links">
+        <a href="https://github.com/hyeji203/delay-detective" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+
+    <div class="media-row">
+      <video class="demo" src="assets/delay-detective/demo.webm" poster="assets/delay-detective/02_home.png" controls muted playsinline preload="metadata"></video>
+      <img src="assets/delay-detective/10_interview.png" alt="AI 인터뷰 화면">
+      <img src="assets/delay-detective/17_result.png" alt="지연 원인 분석 결과 화면">
+    </div>
+
+    <div class="points">
+      <div class="point-card" data-side="be">
+        <h3>Backend 포인트</h3>
+        <ul>
+          <li><strong>오프라인 우선 동기화</strong>: 변경은 먼저 Hive에 저장하고 큐에 쌓은 뒤, 연결되면 Firestore로 업로드 (실패 시 다음 연결에 재시도)</li>
+          <li>충돌 시 <code>updatedAt</code>을 비교해 나중 수정값 채택 (Last-Write-Wins), 단위 테스트로 검증</li>
+          <li>기술 선택 근거를 ADR 3건으로 문서화 (프레임워크 · 상태 관리 · 저장소)</li>
+        </ul>
+      </div>
+      <div class="point-card" data-side="fe">
+        <h3>Frontend 포인트</h3>
+        <ul>
+          <li>마감이 지난 미완료 일을 자동 감지해 목록 맨 위로 정렬, 감지 버그 3건 수정</li>
+          <li>AI 3턴 인터뷰 채팅 → 원인 분석 → 하위 태스크 적용 흐름</li>
+          <li><code>domain / data / application / presentation</code> 계층 구조로 정리</li>
+        </ul>
+      </div>
+      <div class="point-card">
+        <h3>AI · Test 포인트</h3>
+        <ul>
+          <li>모델 응답에 한자·일본어·러시아어가 섞이는 문제를 후처리로 제거</li>
+          <li>Playwright E2E(로그인 · 이동 · 태스크 · 전체 흐름)와 단위 테스트 작성</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="story">
+      <h3>문제 해결: 클릭이 안 되는 Flutter Web을 자동화 테스트하기</h3>
+      <p>Flutter Web은 화면을 캔버스로 그려서 일반 웹페이지처럼 버튼 요소를 찾아 누를 수 없었습니다.
+        <!-- TODO: 실제로 시도한 방법과 최종 해결책(좌표 기반 클릭, 입력 후 blur 처리 등)을 본인 말로 정리 -->
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── 연락처 ───────────── -->
+<section id="contact" class="section contact">
+  <div class="container">
+    <h2 class="section-title">연락처</h2>
+    <ul class="contact-list">
+      <!-- TODO: 지원서에 쓸 이메일 주소 확인 후 입력 -->
+      <li><span>Email</span><a href="mailto:">이메일 입력 예정</a></li>
+      <li><span>GitHub</span><a href="https://github.com/hyeji203" target="_blank" rel="noopener">github.com/hyeji203</a></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">© 2026 신혜지</div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
