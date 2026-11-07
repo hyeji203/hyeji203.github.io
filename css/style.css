@@ -190,3 +190,33 @@ body[data-focus="be"] .points > [data-side="be"] { order: -1; }
   body[data-focus="be"] [data-side="fe"] { opacity: .55; }
   .links a::after { content: " (" attr(href) ")"; font-size: .8em; color: var(--text-sub); }
 }
+
+/* ───────── 추가: 캡션, 문제-원인-해결 표, 개선 전/후 ───────── */
+.media-row figure { margin: 0; }
+.media-row figcaption, .ba-web figcaption { font-size: .82rem; color: var(--text-sub); text-align: center; margin-top: 6px; }
+.media-row.two { grid-template-columns: repeat(2, 1fr); max-width: 560px; }
+.ts { width: 100%; border-collapse: collapse; margin-top: 14px; font-size: .92rem; }
+.ts th { text-align: left; background: var(--bg-soft); color: var(--text-sub); font-weight: 600; }
+.ts th, .ts td { padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.ts th:nth-child(1) { width: 36%; }
+.ts th:nth-child(2) { width: 32%; }
+.ba-web { display: grid; grid-template-columns: 130px 130px 1fr; gap: 16px 18px; align-items: center; margin-top: 16px; }
+.ba-web figure { margin: 0; }
+.ba-web img { width: 100%; aspect-ratio: 390 / 844; object-fit: cover; object-position: top; border: 1px solid var(--line); border-radius: 12px; }
+.ba-text p { font-size: .93rem; }
+.ba-text p + p { margin-top: 8px; }
+@media (max-width: 820px) {
+  .ba-web { grid-template-columns: 1fr 1fr; }
+  .ba-text { grid-column: 1 / -1; margin-bottom: 8px; }
+  .ts thead { display: none; }
+  .ts tr { display: block; border-bottom: 1px solid var(--line); padding: 8px 0; }
+  .ts td { display: block; border: 0; padding: 4px 0; }
+  .ts td:nth-child(1)::before { content: "문제  "; font-weight: 700; color: #c0392b; }
+  .ts td:nth-child(2)::before { content: "원인  "; font-weight: 700; color: var(--text-sub); }
+  .ts td:nth-child(3)::before { content: "해결  "; font-weight: 700; color: #0e7a55; }
+}
+@media print {
+  .ba-web { grid-template-columns: 26mm 26mm 1fr; }
+  .ts, .ba-web { break-inside: avoid; }
+  .media-row.two { max-width: 80mm; }
+}
