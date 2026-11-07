@@ -64,17 +64,25 @@
   <h2 class="title">도와줘, 맵!</h2>
   <p class="meta">졸업작품 · 3인 팀 · 2026.09 ~ 11 · React, Spring Boot, MySQL</p>
 
-  <h3>어떤 서비스인가</h3>
-  <p>길찾기 서비스는 보통 가장 빠른 길을 알려줍니다. 하지만 밤에는 빠른 길이 어둡거나 인적이 드문 경우가 있어서,
-    가로등 데이터와 사용자 위험 제보를 반영해 덜 위험한 경로(안심경로)를 최단경로와 같이 보여주는 서비스를 만들었습니다.</p>
+  <div class="with-shots">
+    <div>
+      <h3>어떤 서비스인가</h3>
+      <p>길찾기 서비스는 보통 가장 빠른 길을 알려줍니다. 하지만 밤에는 빠른 길이 어둡거나 인적이 드문 경우가 있어서,
+        가로등 데이터와 사용자 위험 제보를 반영해 덜 위험한 경로(안심경로)를 최단경로와 같이 보여주는 서비스를 만들었습니다.</p>
 
-  <h3>제가 맡은 부분</h3>
-  <p>팀에서 지도와 경로 탐색을 맡았습니다.</p>
-  <ul>
-    <li>OpenStreetMap 도로 데이터(교차로 약 3,630개, 도로 약 5,890개)와 성남시 보안등 공공데이터를 가공해 시연 지역 지도 데이터를 만들었습니다.</li>
-    <li>경로를 계산하는 서버 기능과, 그 결과를 지도에 그리는 화면을 둘 다 만들었습니다.</li>
-    <li>누군가 경로 근처(50m 이내)에 위험 제보를 올리면 경로를 다시 계산해 안내하도록 했습니다.</li>
-  </ul>
+      <h3>제가 맡은 부분</h3>
+      <p>팀에서 지도와 경로 탐색을 맡았습니다.</p>
+      <ul>
+        <li>OpenStreetMap 도로 데이터(교차로 약 3,630개, 도로 약 5,890개)와 성남시 보안등 공공데이터를 가공해 시연 지역 지도 데이터를 만들었습니다.</li>
+        <li>경로를 계산하는 서버 기능과, 그 결과를 지도에 그리는 화면을 둘 다 만들었습니다.</li>
+        <li>누군가 경로 근처(50m 이내)에 위험 제보를 올리면 경로를 다시 계산해 안내하도록 했습니다.</li>
+      </ul>
+    </div>
+    <div class="side-shots">
+      <figure><img class="phone" src="assets/safemate-map/route_overview.png" alt="출발지부터 도착지까지 경로 화면"><figcaption>출발지에서 도착지까지 경로</figcaption></figure>
+      <figure><img class="phone" src="assets/safemate-map/route_compare.png" alt="안심경로와 최단경로 비교 카드"><figcaption>안심경로와 최단경로 비교<br>(제보 구간 0m / 176m)</figcaption></figure>
+    </div>
+  </div>
 
   <h3>직접 가 보고 고친 것</h3>
   <p>데이터상으로는 문제가 없어 보여도 실제 길과 다른 부분이 있어서, 시연 지역을 확인하면서 경로 오류를 고쳤습니다.</p>
@@ -106,23 +114,25 @@
   <p>다른 과목에서 기존 앱의 개선점을 찾아 직접 개선하는 과제가 있어서, 팀 프로젝트로 만들었던 이 앱을 대상으로 정했습니다.
     닐슨의 사용성 평가 기준(휴리스틱)으로 13개 화면을 하나씩 평가하고, 화면마다 문제점과 개선 방안을 PPT로 정리했습니다. 그중 우선순위가 높은 1~8번을 직접 고쳤습니다.</p>
 
-  <h3>평가했던 화면 예시</h3>
-  <div class="shots">
-    <figure>
-      <img src="assets/refrigerator-app/before_scan.png" alt="개선 전 AI 분석 중 화면">
-      <figcaption>개선 전, AI 분석 중 화면</figcaption>
-    </figure>
+  <h3>개선 전과 후</h3>
+  <div class="ba">
+    <figure><img class="phone" src="assets/refrigerator-app/before_scan.png" alt="개선 전"><figcaption>개선 전</figcaption></figure>
+    <figure><img class="phone" src="assets/refrigerator-app/after_scan.png" alt="개선 후"><figcaption>개선 후</figcaption></figure>
     <div class="shot-text">
       <p><b>문제</b> 분석이 얼마나 걸리는지 표시가 없어서 기다리는 동안 멈춘 건지 알 수 없었습니다.</p>
-      <p><b>수정</b> 업로드 진행률과 경과 시간을 보여주고, 분석 취소 버튼을 넣었습니다. 다른 탭에 갔다 와도 분석 상태가 유지되게 했습니다.</p>
+      <p><b>수정</b> 상단에 4단계 진행 표시를 넣고, 분석 중에는 업로드 진행률과 경과 시간, 취소 버튼을 보여주도록 했습니다. 다른 탭에 갔다 와도 분석 상태가 유지됩니다.</p>
     </div>
-    <figure>
-      <img src="assets/refrigerator-app/before_allergy.png" alt="개선 전 알레르기 입력 화면">
-      <figcaption>개선 전, 알레르기 입력 화면</figcaption>
-    </figure>
+    <figure><img class="phone" src="assets/refrigerator-app/before_allergy.png" alt="개선 전"><figcaption>개선 전</figcaption></figure>
+    <figure><img class="phone" src="assets/refrigerator-app/after_allergy.png" alt="개선 후"><figcaption>개선 후</figcaption></figure>
     <div class="shot-text">
       <p><b>문제</b> 알레르기를 쉼표로 직접 입력하는 방식이라 오타가 나면 필터링이 안 될 수 있었습니다.</p>
-      <p><b>수정</b> 목록에서 고르거나 자동완성으로 입력하게 바꾸고, 추천 레시피에서 알레르기 재료를 빼도록 했습니다.</p>
+      <p><b>수정</b> 목록에서 고르는 방식으로 바꾸고, 목록에 없는 재료만 따로 입력하게 했습니다. 선택한 재료는 추천 레시피에서 빠집니다.</p>
+    </div>
+    <figure><img class="phone" src="assets/refrigerator-app/before_recipe.png" alt="개선 전"><figcaption>개선 전</figcaption></figure>
+    <figure><img class="phone" src="assets/refrigerator-app/after_recipe.png" alt="개선 후"><figcaption>개선 후</figcaption></figure>
+    <div class="shot-text">
+      <p><b>문제</b> 레시피에 필요한 재료 중 무엇이 냉장고에 있는지 알 수 없고, 장바구니에 담으려면 직접 다시 입력해야 했습니다.</p>
+      <p><b>수정</b> 재료마다 보유·부족을 표시하고, 부족한 재료를 버튼 하나로 장바구니에 담을 수 있게 했습니다.</p>
     </div>
   </div>
 
@@ -131,7 +141,7 @@
     <li>오류 메시지에 원인과 해결 방법을 같이 적었습니다.</li>
     <li>알림 권한을 앱을 처음 켤 때가 아니라, 유통기한을 처음 등록할 때 이유와 함께 요청하도록 바꿨습니다.</li>
     <li>회원가입할 때 입력값을 바로바로 확인해 주고, 가입하면 자동으로 로그인되게 했습니다.</li>
-    <li>레시피에서 부족한 재료를 장바구니에 바로 담을 수 있게 했습니다.</li>
+    <li>냉장고 목록에 정렬 기능과 유통기한 임박 배지를 넣었습니다.</li>
   </ul>
 
   <h3>하지 않은 것</h3>
@@ -147,6 +157,12 @@
   <p class="meta">개인 프로젝트 · 2026.05 ~ 06 (6주) · Flutter, Firebase</p>
 
   <p>혼자 기획부터 개발까지 한 프로젝트입니다. 나중에 왜 이렇게 만들었는지 설명할 수 있도록, 기술을 고를 때마다 비교한 내용을 문서로 남겼습니다.</p>
+
+  <div class="row-shots">
+    <figure><img class="phone" src="assets/delay-detective/02_home.png" alt="홈 캘린더 화면"><figcaption>홈 화면</figcaption></figure>
+    <figure><img class="phone" src="assets/delay-detective/10_interview.png" alt="미루는 이유를 묻는 AI 인터뷰 화면"><figcaption>미루는 이유를 묻는 인터뷰</figcaption></figure>
+    <figure><img class="phone" src="assets/delay-detective/17_result.png" alt="분석 결과와 작은 할 일 목록"><figcaption>분석 결과와 작게 나눈 할 일</figcaption></figure>
+  </div>
 
   <h3>예시: 데이터 저장 방식을 고른 문서</h3>
   <p>조건은 세 가지였습니다. 인터넷이 없어도 쓸 수 있어야 하고, 여러 기기에서 같은 데이터를 볼 수 있어야 하고, 6주 안에 끝내야 했습니다.</p>

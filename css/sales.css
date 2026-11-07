@@ -6,7 +6,7 @@ body {
   font-size: 9.8pt; line-height: 1.65;
 }
 .page {
-  position: relative; width: 210mm; height: 297mm; margin: 10mm auto; padding: 18mm 18mm 16mm;
+  position: relative; width: 210mm; height: 297mm; margin: 10mm auto; padding: 15mm 18mm 14mm;
   background: #fff; box-shadow: 0 1px 6px rgba(0,0,0,.15); overflow: hidden;
 }
 .page-no { position: absolute; bottom: 9mm; left: 0; right: 0; text-align: center; font-size: 8.5pt; color: #888; }
@@ -20,7 +20,7 @@ body[data-photo="on"] .profile-photo { display: block; }
 .intro { margin-top: 5mm; }
 
 h2 { font-size: 12pt; font-weight: 700; margin: 7mm 0 2.5mm; }
-h3 { font-size: 10.5pt; font-weight: 700; margin: 6mm 0 1.5mm; }
+h3 { font-size: 10.5pt; font-weight: 700; margin: 4.5mm 0 1.5mm; }
 p + p { margin-top: 1.5mm; }
 ul { padding-left: 5mm; }
 li + li { margin-top: 1mm; }
@@ -52,3 +52,12 @@ thead th { background: #f2f2f2; font-weight: 600; }
   body { background: #fff; }
   .page { margin: 0; box-shadow: none; break-after: page; }
 }
+
+/* 실제 앱 화면 */
+img.phone { display: block; width: 100%; border: 1px solid #bbb; border-radius: 2.5mm; }
+figure figcaption { font-size: 7.6pt; color: #666; text-align: center; margin-top: 1mm; line-height: 1.35; }
+.with-shots { display: grid; grid-template-columns: 1fr 60mm; gap: 6mm; align-items: start; }
+.side-shots { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; margin-top: 6mm; }
+.ba { display: grid; grid-template-columns: 19mm 19mm 1fr; gap: 2mm 4mm; align-items: center; margin-top: 1mm; }
+.row-shots { display: grid; grid-template-columns: repeat(3, 23mm); justify-content: center; gap: 10mm; margin: 3mm 0 0; }
+.adr th, .adr td, .risk th, .risk td { padding: 1.5mm 2.5mm; }
