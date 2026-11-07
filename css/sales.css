@@ -59,6 +59,8 @@ img.phone { display: block; width: 100%; border: 1px solid #bbb; border-radius: 
 figure figcaption { font-size: 7.6pt; color: #666; text-align: center; margin-top: 1mm; line-height: 1.35; }
 .with-shots { display: grid; grid-template-columns: 1fr 60mm; gap: 6mm; align-items: start; }
 .side-shots { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; margin-top: 6mm; }
-.ba { display: grid; grid-template-columns: 19mm 19mm 1fr; gap: 2mm 4mm; align-items: center; margin-top: 1mm; }
+.ba { display: grid; grid-template-columns: 18.5mm 18.5mm 1fr; gap: 2mm 4mm; align-items: center; margin-top: 1mm; }
 .row-shots { display: grid; grid-template-columns: repeat(3, 23mm); justify-content: center; gap: 10mm; margin: 3mm 0 0; }
 .adr th, .adr td, .risk th, .risk td { padding: 1.5mm 2.5mm; }
+/* 개선 전/후 이미지를 같은 휴대폰 비율로 맞춤 */
+.ba img.phone { aspect-ratio: 390 / 844; object-fit: cover; object-position: top; }
