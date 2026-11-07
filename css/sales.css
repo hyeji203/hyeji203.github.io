@@ -64,3 +64,5 @@ figure figcaption { font-size: 7.6pt; color: #666; text-align: center; margin-to
 .adr th, .adr td, .risk th, .risk td { padding: 1.3mm 2.5mm; }
 /* 개선 전/후 이미지를 같은 휴대폰 비율로 맞춤 */
 .ba img.phone { aspect-ratio: 390 / 844; object-fit: cover; object-position: top; }
+
+.contact a { color: inherit; }
