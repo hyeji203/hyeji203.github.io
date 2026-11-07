@@ -47,13 +47,6 @@ code {
 .nav-links a { text-decoration: none; font-size: .92rem; color: var(--text-sub); }
 .nav-links a:hover { color: var(--text); }
 
-.focus-toggle { display: flex; background: var(--bg-soft); border-radius: 999px; padding: 3px; }
-.focus-toggle button {
-  border: 0; background: transparent; cursor: pointer;
-  font: inherit; font-size: .82rem; font-weight: 600;
-  padding: 5px 12px; border-radius: 999px; color: var(--text-sub);
-}
-.focus-toggle button.active { background: #fff; color: var(--text); box-shadow: 0 1px 3px rgba(0,0,0,.12); }
 
 /* ───────── 소개 ───────── */
 .hero { padding: 96px 0 72px; background: linear-gradient(180deg, #eef3ff 0%, #fff 100%); }
@@ -147,13 +140,6 @@ body[data-photo="off"] .profile-photo { display: none; }
 }
 .tag.good { background: #e3f6ee; color: #0e7a55; }
 
-/* Frontend / Backend 보기 기준 — 선택하지 않은 쪽을 흐리게 */
-body[data-focus="fe"] [data-side="be"],
-body[data-focus="be"] [data-side="fe"] { opacity: .35; filter: grayscale(.6); }
-body[data-focus="fe"] .points, body[data-focus="be"] .points { display: flex; flex-wrap: wrap; }
-body[data-focus="fe"] .points > *, body[data-focus="be"] .points > * { flex: 1 1 300px; }
-body[data-focus="fe"] .points > [data-side="fe"],
-body[data-focus="be"] .points > [data-side="be"] { order: -1; }
 
 /* ───────── 연락처 ───────── */
 .contact-list { list-style: none; display: grid; gap: 10px; }
@@ -164,7 +150,6 @@ body[data-focus="be"] .points > [data-side="be"] { order: -1; }
 /* ───────── 반응형 ───────── */
 @media (max-width: 820px) {
   .nav-links { display: none; }
-  .nav-inner { justify-content: space-between; }
   .media-row { grid-template-columns: 1fr 1fr; }
   .before-after { grid-template-columns: 1fr; }
   .hero-grid { flex-direction: column; align-items: flex-start; gap: 28px; }
@@ -186,8 +171,6 @@ body[data-focus="be"] .points > [data-side="be"] { order: -1; }
   .media-row { grid-template-columns: repeat(3, 1fr); margin: 14px 0; }
   .media-row { max-width: 120mm; margin: 10px auto; }
   .point-card, .story, .skill-card { break-inside: avoid; }
-  body[data-focus="fe"] [data-side="be"],
-  body[data-focus="be"] [data-side="fe"] { opacity: .55; }
   .links a::after { content: " (" attr(href) ")"; font-size: .8em; color: var(--text-sub); }
 }
 
