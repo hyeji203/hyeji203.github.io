@@ -1,0 +1,102 @@
+/* IT 기술영업용 A4 문서 (화면에서는 종이처럼, 인쇄하면 A4 4쪽) */
+:root {
+  --navy: #1f3a8a;
+  --accent: #2f6bff;
+  --text: #1b1f2a;
+  --sub: #5b6273;
+  --line: #e2e6ee;
+  --soft: #f5f7fb;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Pretendard", "Malgun Gothic", sans-serif;
+  color: var(--text); background: #e9ecf2; word-break: keep-all;
+  font-size: 9.6pt; line-height: 1.55;
+}
+.page {
+  position: relative; width: 210mm; height: 297mm; margin: 10mm auto; padding: 16mm 16mm 14mm;
+  background: #fff; box-shadow: 0 2px 12px rgba(0,0,0,.12); overflow: hidden;
+}
+.page-no { position: absolute; bottom: 8mm; right: 16mm; font-size: 8pt; color: #9aa1b1; }
+strong { font-weight: 700; }
+small { font-weight: 400; }
+
+/* 1쪽 머리 */
+.doc-head { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid var(--navy); padding-bottom: 5mm; }
+.kicker { color: var(--accent); font-weight: 700; font-size: 9pt; letter-spacing: .03em; }
+.doc-head h1 { font-size: 24pt; font-weight: 800; line-height: 1.2; margin-top: 1mm; }
+.contact { color: var(--sub); font-size: 8.8pt; margin-top: 1.5mm; }
+.profile-photo { display: none; width: 26mm; height: 32.5mm; object-fit: cover; border-radius: 2.5mm; }
+body[data-photo="on"] .profile-photo { display: block; }
+
+.headline { margin: 6mm 0 2mm; padding: 5mm 6mm; background: var(--soft); border-left: 4px solid var(--navy); border-radius: 0 3mm 3mm 0; }
+.headline p { font-size: 12.5pt; line-height: 1.6; }
+
+.sec { font-size: 12pt; font-weight: 800; color: var(--navy); margin: 6mm 0 3mm; }
+
+.cap-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5mm; }
+.cap { border: 1px solid var(--line); border-radius: 3mm; padding: 3.5mm 4mm; }
+.cap-req { display: inline-block; font-size: 8pt; font-weight: 700; color: #fff; background: var(--navy); border-radius: 99px; padding: .4mm 2.6mm; }
+.cap h3 { font-size: 10.5pt; margin: 2mm 0 1.5mm; }
+.cap ul, .facts { padding-left: 4.5mm; }
+.cap li + li, .facts li + li { margin-top: 1mm; }
+.ref { color: var(--accent); font-weight: 700; white-space: nowrap; }
+
+table { width: 100%; border-collapse: collapse; font-size: 9pt; }
+th { background: var(--soft); color: var(--sub); font-weight: 700; text-align: left; }
+th, td { border-bottom: 1px solid var(--line); padding: 2mm 2.5mm; vertical-align: top; }
+.overview small { color: var(--sub); }
+.tech-line { margin-top: 5mm; font-size: 8.8pt; color: var(--sub); }
+.tl-label { display: inline-block; font-weight: 700; color: var(--text); margin-right: 2mm; }
+
+/* 사례 페이지 공통 */
+.case-tag { color: var(--accent); font-weight: 700; font-size: 9pt; }
+.case-title { font-size: 19pt; font-weight: 800; margin: 1mm 0 2mm; }
+.case-title small { font-size: 10pt; color: var(--sub); margin-left: 2mm; }
+.lead { color: var(--sub); font-size: 10pt; padding-bottom: 4mm; border-bottom: 1px solid var(--line); }
+.sub { font-size: 11pt; font-weight: 800; margin: 5.5mm 0 2.5mm; }
+
+.flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3mm; margin-top: 5mm; }
+.step { position: relative; background: var(--soft); border-radius: 3mm; padding: 3.5mm; }
+.step h4 { font-size: 10pt; margin: 1.5mm 0 1mm; color: var(--navy); }
+.step p { font-size: 8.8pt; }
+.n { display: inline-flex; align-items: center; justify-content: center; width: 5.5mm; height: 5.5mm; border-radius: 50%; background: var(--navy); color: #fff; font-size: 8pt; font-weight: 700; }
+
+.pi td:last-child { white-space: nowrap; color: var(--navy); }
+.collab { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3mm; }
+.collab > div { border: 1px solid var(--line); border-radius: 3mm; padding: 3mm 3.5mm; }
+.collab p { margin-top: 1mm; font-size: 8.8pt; color: var(--sub); }
+
+.method { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.5mm; margin-top: 5mm; }
+.method > div { background: var(--soft); border-radius: 3mm; padding: 3mm; font-size: 9pt; }
+.method .n { margin-right: 1.5mm; }
+
+.analysis { display: grid; grid-template-columns: 30mm 1fr 30mm 1fr; gap: 4mm; align-items: center; margin-top: 5mm; }
+.analysis figure img { width: 100%; display: block; }
+.analysis figcaption { font-size: 7.8pt; color: var(--sub); text-align: center; margin-top: 1mm; }
+.finding p { font-size: 9pt; }
+.finding .q, .finding .a { display: inline-block; font-size: 7.6pt; font-weight: 700; border-radius: 1.5mm; padding: .2mm 2mm; margin: 1.5mm 0 .8mm; }
+.finding .q { background: #fde8e8; color: #c0392b; margin-top: 0; }
+.finding .a { background: #e3f6ee; color: #0e7a55; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; column-gap: 8mm; }
+.two-col li + li { margin-top: 0; }
+.two-col li { margin-bottom: 1mm; }
+
+.insight { margin-top: 5mm; padding: 4mm 5mm; border: 1.5px solid var(--navy); border-radius: 3mm; }
+.insight p { margin-top: 1.5mm; font-size: 9.2pt; }
+
+.req { font-size: 9pt; color: var(--sub); margin-bottom: 2mm; }
+.adr tr.chosen td { background: #eef3ff; }
+.adr td:last-child { white-space: nowrap; color: var(--sub); }
+.adr tr.chosen td:last-child { color: var(--navy); }
+.note { margin-top: 2mm; font-size: 9pt; }
+.risk td:nth-child(2), .risk td:nth-child(3) { white-space: nowrap; }
+.docs { list-style: none; display: flex; flex-wrap: wrap; gap: 2mm; }
+.docs li { background: var(--soft); border-radius: 99px; padding: .8mm 3mm; font-size: 8.8pt; }
+.closing { margin-top: 6mm; padding: 4.5mm 5mm; background: var(--navy); color: #fff; border-radius: 3mm; font-size: 10pt; line-height: 1.65; }
+
+@media print {
+  @page { size: A4; margin: 0; }
+  body { background: #fff; }
+  .page { margin: 0; box-shadow: none; break-after: page; }
+}
