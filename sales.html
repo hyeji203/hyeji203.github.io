@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
   <link rel="stylesheet" href="css/sales.css">
 </head>
-<!-- A4 인쇄용 문서. 사진은 기본 숨김, ?photo=on 이면 표시 -->
+<!-- A4 인쇄용 문서. 사진은 기본 표시, ?photo=off 이면 숨김 -->
 <body>
 
 <!-- 1쪽 -->
@@ -211,7 +211,7 @@
 <script>
   (function () {
     var v = new URLSearchParams(location.search).get('photo');
-    if (v === 'on') document.body.dataset.photo = 'on';
+    if (v === 'off') document.body.dataset.photo = 'off';
   })();
 </script>
 </body>

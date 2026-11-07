@@ -15,8 +15,8 @@ body {
 .doc-head { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 1.5px solid #222; padding-bottom: 3mm; }
 .doc-head h1 { font-size: 19pt; font-weight: 700; }
 .contact { color: #555; font-size: 9pt; margin-top: 1mm; }
-.profile-photo { display: none; width: 24mm; height: 30mm; object-fit: cover; }
-body[data-photo="on"] .profile-photo { display: block; }
+.profile-photo { display: block; width: 24mm; height: 30mm; object-fit: cover; border-radius: 1.5mm; }
+body[data-photo="off"] .profile-photo { display: none; }
 .intro { margin-top: 5mm; }
 
 h2 { font-size: 12pt; font-weight: 700; margin: 7mm 0 2.5mm; }
