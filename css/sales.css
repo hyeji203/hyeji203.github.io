@@ -66,3 +66,14 @@ figure figcaption { font-size: 7.6pt; color: #666; text-align: center; margin-to
 .ba img.phone { aspect-ratio: 390 / 844; object-fit: cover; object-position: top; }
 
 .contact a { color: inherit; }
+
+/* 1쪽 웹 포트폴리오 링크 상자 */
+.site-box {
+  display: flex; align-items: center; justify-content: space-between; gap: 6mm;
+  margin-top: 5mm; padding: 4mm 5mm; border: 1.5px solid #222; border-radius: 2mm;
+  color: inherit; text-decoration: none;
+}
+.site-label { font-size: 8.5pt; color: #555; font-weight: 600; }
+.site-url { font-size: 15pt; font-weight: 700; color: #1f3a8a; line-height: 1.3; }
+.site-desc { font-size: 8.8pt; color: #555; margin-top: 1mm; }
+.qr { width: 22mm; height: 22mm; flex: none; }
