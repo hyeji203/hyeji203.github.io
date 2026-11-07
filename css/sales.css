@@ -77,3 +77,50 @@ figure figcaption { font-size: 7.6pt; color: #666; text-align: center; margin-to
 .site-url { font-size: 15pt; font-weight: 700; color: #1f3a8a; line-height: 1.3; }
 .site-desc { font-size: 8.8pt; color: #555; margin-top: 1mm; }
 .qr { width: 22mm; height: 22mm; flex: none; }
+
+/* ───────── 꾸밈: 연보라 포인트 색 ───────── */
+:root { --pt: #6d28d9; --pt-dark: #4c1d95; --pt-soft: #f4effd; --pt-line: #d9ccf5; }
+
+.doc-head { border-bottom: 2.5px solid var(--pt); }
+.doc-head h1 { color: #1b1530; }
+.contact a { color: var(--pt-dark); }
+.profile-photo { border: 1px solid var(--pt-line); }
+
+.site-box { border: 1.5px solid var(--pt); background: var(--pt-soft); }
+.site-label { color: var(--pt); }
+.site-url { color: var(--pt-dark); }
+
+/* 1쪽 섹션 제목: 왼쪽 막대 */
+h2 { padding-left: 3mm; border-left: 3px solid var(--pt); line-height: 1.25; }
+
+/* 표 */
+table { border-top: 2px solid var(--pt); }
+thead th, .exp th, .plain th { background: var(--pt-soft); color: var(--pt-dark); }
+th, td { border-bottom-color: #e4ddf3; }
+.adr tr.chosen td { background: var(--pt-soft); color: var(--pt-dark); }
+
+/* 프로젝트 머리: 큰 번호 + 제목 밑줄 */
+.label { font-size: 8.5pt; font-weight: 700; letter-spacing: .12em; color: var(--pt); }
+.label span { display: block; font-size: 22pt; line-height: 1; letter-spacing: 0; font-weight: 800; color: var(--pt); margin-top: .5mm; }
+.title { position: relative; padding-bottom: 1.6mm; margin-bottom: 1.5mm; }
+.title::after { content: ""; position: absolute; left: 0; bottom: 0; width: 14mm; height: 1.2mm; border-radius: 1mm; background: var(--pt); }
+.page > h2.title { border-left: 0; padding-left: 0; }
+.meta { border-bottom: 1px solid var(--pt-line); }
+
+/* 사례 소제목: 작은 네모 */
+h3::before { content: ""; display: inline-block; width: 1.8mm; height: 1.8mm; border-radius: .4mm; background: var(--pt); margin-right: 2mm; vertical-align: .35mm; }
+ul li::marker { color: var(--pt); }
+.shot-text b, ul b { color: var(--pt-dark); }
+
+/* 화면 이미지 */
+img.phone { border-color: var(--pt-line); }
+.row-shots, .side-shots { background: var(--pt-soft); border-radius: 2mm; padding: 2mm; }
+
+.page-no { color: var(--pt); font-weight: 600; }
+/* 프로젝트 번호를 제목 왼쪽에 나란히 (세로 공간 절약) */
+.label { float: left; margin: 0 5mm 0 0; padding-right: 5mm; border-right: 1px solid var(--pt-line); text-align: center; }
+.title { margin-top: 1mm; }
+.meta { border-bottom: 0; padding-bottom: 0; }
+.meta + * { clear: both; padding-top: 3mm; border-top: 1px solid var(--pt-line); margin-top: 3mm; }
+.meta + .with-shots, .meta + .row-shots { padding-top: 0; }
+.title { overflow: hidden; }

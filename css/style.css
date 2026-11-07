@@ -203,3 +203,32 @@ body[data-photo="off"] .profile-photo { display: none; }
   .ts, .ba-web { break-inside: avoid; }
   .media-row.two { max-width: 80mm; }
 }
+
+/* ───────── 꾸밈: 연보라 포인트 색 ───────── */
+:root {
+  --navy: #4c1d95; --accent: #6d28d9;
+  --fe: #6d28d9; --be: #6d28d9;
+  --pt-soft: #f4effd; --pt-line: #e2d8f7;
+}
+.hero { background: linear-gradient(180deg, #f3eefd 0%, #fff 100%); }
+.profile-photo { box-shadow: 0 8px 28px rgba(76, 29, 149, .16); }
+.section-title { padding-left: 14px; border-left: 4px solid var(--accent); line-height: 1.2; }
+.skill-card h3, .skill-card[data-side="fe"] h3, .skill-card[data-side="be"] h3 { color: var(--navy); }
+.chips li { background: var(--pt-soft); color: #3b2a63; }
+.project.featured { background: #faf8ff; }
+.featured-badge { background: var(--accent); }
+.badge { background: var(--pt-soft); color: var(--navy); }
+.pnum { font-size: .8rem; font-weight: 700; letter-spacing: .14em; color: var(--accent); margin-top: 14px; }
+.pnum span { display: block; font-size: 2.6rem; line-height: 1; letter-spacing: 0; font-weight: 800; margin-top: 2px; }
+.project-head h2 { position: relative; padding-bottom: 10px; }
+.project-head h2::after { content: ""; position: absolute; left: 0; bottom: 0; width: 56px; height: 5px; border-radius: 3px; background: var(--accent); }
+.point-card, .point-card[data-side="fe"], .point-card[data-side="be"] { border-top-color: var(--accent); }
+.point-card h3, .point-card[data-side="fe"] h3, .point-card[data-side="be"] h3 { color: var(--navy); }
+.point-card li::marker { color: var(--accent); }
+.story { border-color: var(--pt-line); }
+.story h3::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 3px; background: var(--accent); margin-right: 8px; }
+.ts { border-top: 2px solid var(--accent); }
+.ts th { background: var(--pt-soft); color: var(--navy); }
+.media-row img, .media-row video, .ba-web img { border-color: var(--pt-line); }
+.links a { color: var(--accent); }
+.footer { border-top-color: var(--pt-line); }
