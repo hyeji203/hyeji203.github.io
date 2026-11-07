@@ -30,7 +30,8 @@ table { width: 100%; border-collapse: collapse; font-size: 9.2pt; border-top: 1.
 th, td { border-bottom: 1px solid #ccc; padding: 2mm 2.5mm; vertical-align: top; text-align: left; }
 thead th { background: #f2f2f2; font-weight: 600; }
 .exp th, .plain th { width: 32mm; background: #f2f2f2; font-weight: 600; }
-.fix td:last-child, .adr td:last-child { white-space: nowrap; }
+.adr td:last-child { white-space: nowrap; }
+.fix th:nth-child(1) { width: 38%; } .fix th:nth-child(2) { width: 30%; }
 .adr tr.chosen td { background: #f7f7f7; font-weight: 600; }
 .risk td:nth-child(2), .risk td:nth-child(3) { white-space: nowrap; }
 
