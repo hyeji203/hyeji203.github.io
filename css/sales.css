@@ -77,3 +77,6 @@ figure figcaption { font-size: 7.6pt; color: #666; text-align: center; margin-to
 .site-url { font-size: 15pt; font-weight: 700; color: #1f3a8a; line-height: 1.3; }
 .site-desc { font-size: 8.8pt; color: #555; margin-top: 1mm; }
 .qr { width: 22mm; height: 22mm; flex: none; }
+
+.intro-title { margin-top: 5mm; font-size: 12pt; font-weight: 700; }
+.intro-title + .intro { margin-top: 1.5mm; }
