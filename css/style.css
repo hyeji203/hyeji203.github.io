@@ -54,7 +54,7 @@ code {
 .hero-text { flex: 1; min-width: 0; }
 .eyebrow {
   display: inline-flex; align-items: center; gap: 8px;
-  font-size: .78rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--sub);
+  font-size: .85rem; font-weight: 600; letter-spacing: .02em; color: var(--sub);
 }
 .eyebrow::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
 .hero h1 {
@@ -183,6 +183,7 @@ body[data-photo="off"] .profile-photo { display: none; }
 @media (max-width: 860px) {
   .nav-links { display: none; }
   .hero { padding: 96px 0 80px; }
+  .hero h1 { font-size: 1.72rem; }
   .hero-grid { flex-direction: column; align-items: flex-start; gap: 36px; }
   .profile-photo { order: 0; width: 132px; height: 165px; border-radius: 16px; }
   .section { padding: 88px 0; }
