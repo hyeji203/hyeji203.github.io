@@ -124,6 +124,7 @@ body[data-photo="off"] .profile-photo { display: none; }
   margin: 56px 0 0; padding: 56px; background: var(--soft); border-radius: 28px;
 }
 .media-row.two { grid-template-columns: repeat(2, 230px); justify-content: center; }
+.media-row.four { grid-template-columns: repeat(4, 1fr); gap: 24px; padding: 48px 40px; }
 .media-row figure { margin: 0; }
 .media-row img, .ba-web img {
   width: 100%; aspect-ratio: 9 / 19.5; object-fit: cover; object-position: top; background: #fff;

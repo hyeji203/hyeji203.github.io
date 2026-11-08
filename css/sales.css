@@ -80,3 +80,4 @@ figure figcaption { font-size: 7.6pt; color: #666; text-align: center; margin-to
 
 .intro-title { margin-top: 5mm; font-size: 12pt; font-weight: 700; }
 .intro-title + .intro { margin-top: 1.5mm; }
+.row-shots.four { grid-template-columns: repeat(4, 20mm); gap: 10mm; }

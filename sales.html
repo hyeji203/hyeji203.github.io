@@ -74,24 +74,23 @@
   <h2 class="title">도와줘, 맵!</h2>
   <p class="meta">졸업작품 · 3인 팀 · 2026.09 ~ 11 · React, Spring Boot, MySQL</p>
 
-  <div class="with-shots">
-    <div>
-      <h3>어떤 서비스인가</h3>
-      <p>길찾기 서비스는 보통 가장 빠른 길을 알려줍니다. 하지만 밤에는 빠른 길이 어둡거나 인적이 드문 경우가 있어서,
-        가로등 데이터와 사용자 위험 제보를 반영해 덜 위험한 경로(안심경로)를 최단경로와 같이 보여주는 서비스를 만들었습니다.</p>
+  <h3>어떤 서비스인가</h3>
+  <p>길찾기 서비스는 보통 가장 빠른 길을 알려줍니다. 하지만 밤에는 빠른 길이 어둡거나 인적이 드문 경우가 있어서,
+    가로등 데이터와 사용자 위험 제보를 반영해 덜 위험한 경로(안심경로)를 최단경로와 같이 보여주는 서비스를 만들었습니다.</p>
 
-      <h3>제가 맡은 부분</h3>
-      <p>팀에서 지도와 경로 탐색을 맡았습니다.</p>
-      <ul>
-        <li>OpenStreetMap 도로 데이터(교차로 약 3,630개, 도로 약 5,890개)와 성남시 보안등 공공데이터를 가공해 시연 지역 지도 데이터를 만들었습니다.</li>
-        <li>경로를 계산하는 서버 기능과, 그 결과를 지도에 그리는 화면을 둘 다 만들었습니다.</li>
-        <li>누군가 경로 근처(50m 이내)에 위험 제보를 올리면 경로를 다시 계산해 안내하도록 했습니다.</li>
-      </ul>
-    </div>
-    <div class="side-shots">
-      <figure><img class="phone" src="assets/safemate-map/route_overview.png" alt="출발지부터 도착지까지 경로 화면"><figcaption>출발지에서 도착지까지 경로</figcaption></figure>
-      <figure><img class="phone" src="assets/safemate-map/route_compare.png" alt="안심경로와 최단경로 비교 카드"><figcaption>안심경로와 최단경로 비교<br>(제보 구간 0m / 176m)</figcaption></figure>
-    </div>
+  <h3>제가 맡은 부분</h3>
+  <p>팀에서 지도와 경로 탐색을 맡았습니다.</p>
+  <ul>
+    <li>OpenStreetMap 도로 데이터(교차로 약 3,630개, 도로 약 5,890개)와 성남시 보안등 공공데이터를 가공해 시연 지역 지도 데이터를 만들었습니다.</li>
+    <li>경로를 계산하는 서버 기능과, 그 결과를 지도에 그리는 화면을 둘 다 만들었습니다.</li>
+    <li>누군가 경로 근처(50m 이내)에 위험 제보를 올리면 경로를 다시 계산해 안내하도록 했습니다.</li>
+  </ul>
+
+  <div class="row-shots four">
+    <figure><img class="phone" src="assets/safemate-map/place_search.png" alt="장소 검색"><figcaption>① 목적지 검색</figcaption></figure>
+    <figure><img class="phone" src="assets/safemate-map/place_card.png" alt="출발·도착 지정"><figcaption>② 출발·도착 지정</figcaption></figure>
+    <figure><img class="phone" src="assets/safemate-map/route_overview.png" alt="전체 경로"><figcaption>③ 전체 경로</figcaption></figure>
+    <figure><img class="phone" src="assets/safemate-map/route_compare.png" alt="경로 비교"><figcaption>④ 안심·최단 비교</figcaption></figure>
   </div>
 
   <h3>개발하면서 겪은 문제와 해결</h3>

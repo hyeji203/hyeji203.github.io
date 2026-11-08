@@ -67,23 +67,22 @@
   <h2 class="title">도와줘, 맵!</h2>
   <p class="meta">졸업작품 · 3인 팀 · 2026.09 ~ 11 · React, Spring Boot, MySQL, WebSocket, Python</p>
 
-  <div class="with-shots">
-    <div>
-      <h3>어떤 서비스인가</h3>
-      <p>가로등 공공데이터와 사용자 위험 제보로 도로마다 위험도를 계산해, 최단경로와 덜 위험한 경로(안심경로)를 같이 보여주는 웹 지도 서비스입니다.</p>
+  <h3>어떤 서비스인가</h3>
+  <p>가로등 공공데이터와 사용자 위험 제보로 도로마다 위험도를 계산해, 최단경로와 덜 위험한 경로(안심경로)를 같이 보여주는 웹 지도 서비스입니다.</p>
 
-      <h3>제가 맡은 부분: 지도와 경로 탐색</h3>
-      <ul>
-        <li><b>데이터</b> OpenStreetMap 도로 데이터(교차로 약 3,630개, 도로 약 5,890개)와 성남시 보안등 데이터를 Python으로 가공했습니다. 서버가 켜질 때 CSV를 DB에 넣고, 파일이 바뀐 경우에만 다시 넣습니다.</li>
-        <li><b>서버</b> 같은 다익스트라 알고리즘에 비용 계산만 다르게 넣어 두 경로를 한 번에 구합니다. 안심 비용은 도보 비용 × (1 + 2.0 × 위험도)이고, 도보 비용은 도로 종류별로 다르게(보행자길 0.9배 ~ 큰 차도 2.0배, 계단 2.5배) 정했습니다.</li>
-        <li><b>실시간</b> 보고 있는 경로 50m 안에 새 제보가 들어오면 경로를 다시 계산하고, 계산하는 동안에는 기존 경로를 유지합니다.</li>
-        <li><b>화면</b> 카카오맵에 두 경로를 실제 도로 모양대로 그리고, 장소 검색, 출발/도착 지정, 경로 비교 카드를 만들었습니다. 지하철역이면 빠른 출구와 계단·에스컬레이터 여부도 안내합니다.</li>
-      </ul>
-    </div>
-    <div class="side-shots">
-      <figure><img class="phone" src="assets/safemate-map/route_overview.png" alt="출발지부터 도착지까지 경로 화면"><figcaption>출발지에서 도착지까지 경로</figcaption></figure>
-      <figure><img class="phone" src="assets/safemate-map/route_compare.png" alt="안심경로와 최단경로 비교 카드"><figcaption>안심경로와 최단경로 비교<br>(제보 구간 0m / 176m)</figcaption></figure>
-    </div>
+  <h3>제가 맡은 부분: 지도와 경로 탐색</h3>
+  <ul>
+    <li><b>데이터</b> OpenStreetMap 도로 데이터(교차로 약 3,630개, 도로 약 5,890개)와 성남시 보안등 데이터를 Python으로 가공했습니다. 서버가 켜질 때 CSV를 DB에 넣고, 파일이 바뀐 경우에만 다시 넣습니다.</li>
+    <li><b>서버</b> 같은 다익스트라 알고리즘에 비용 계산만 다르게 넣어 두 경로를 한 번에 구합니다. 안심 비용은 도보 비용 × (1 + 2.0 × 위험도)이고, 도보 비용은 도로 종류별로 다르게(보행자길 0.9배 ~ 큰 차도 2.0배, 계단 2.5배) 정했습니다.</li>
+    <li><b>실시간</b> 보고 있는 경로 50m 안에 새 제보가 들어오면 경로를 다시 계산하고, 계산하는 동안에는 기존 경로를 유지합니다.</li>
+    <li><b>화면</b> 카카오맵에 두 경로를 실제 도로 모양대로 그리고, 장소 검색, 출발/도착 지정, 경로 비교 카드를 만들었습니다. 지하철역이면 빠른 출구와 계단·에스컬레이터 여부도 안내합니다.</li>
+  </ul>
+
+  <div class="row-shots four">
+    <figure><img class="phone" src="assets/safemate-map/place_search.png" alt="장소 검색"><figcaption>① 목적지 검색</figcaption></figure>
+    <figure><img class="phone" src="assets/safemate-map/place_card.png" alt="출발·도착 지정"><figcaption>② 출발·도착 지정</figcaption></figure>
+    <figure><img class="phone" src="assets/safemate-map/route_overview.png" alt="전체 경로"><figcaption>③ 전체 경로</figcaption></figure>
+    <figure><img class="phone" src="assets/safemate-map/route_compare.png" alt="경로 비교"><figcaption>④ 안심·최단 비교</figcaption></figure>
   </div>
 
   <h3>개발하면서 겪은 문제와 해결</h3>
