@@ -120,11 +120,11 @@ body[data-photo="off"] .profile-photo { display: none; }
 
 /* 화면 무대: 연한 회색 바탕 위에 그림자 있는 휴대폰 화면 */
 .media-row {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; align-items: start;
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; align-items: start;
   margin: 56px 0 0; padding: 56px; background: var(--soft); border-radius: 28px;
 }
 .media-row.two { grid-template-columns: repeat(2, 230px); justify-content: center; }
-.media-row.four { grid-template-columns: repeat(4, 1fr); gap: 24px; padding: 48px 40px; }
+.media-row.four { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; padding: 48px 40px; }
 .media-row figure { margin: 0; }
 .media-row img, .ba-web img {
   width: 100%; aspect-ratio: 9 / 19.5; object-fit: cover; object-position: top; background: #fff;
@@ -188,8 +188,7 @@ body[data-photo="off"] .profile-photo { display: none; }
   .hero-grid { flex-direction: column; align-items: flex-start; gap: 36px; }
   .profile-photo { order: 0; width: 132px; height: 165px; border-radius: 16px; }
   .section { padding: 88px 0; }
-  .media-row { grid-template-columns: 1fr 1fr; padding: 28px; gap: 20px; border-radius: 20px; }
-  .media-row.two { grid-template-columns: 1fr 1fr; }
+  .media-row, .media-row.two, .media-row.four { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 28px; gap: 20px; border-radius: 20px; }
   .ba-web { grid-template-columns: 1fr 1fr; gap: 24px 16px; }
   .ba-text { grid-column: 1 / -1; margin-bottom: 12px; }
   .ts thead { display: none; }
@@ -208,6 +207,7 @@ body[data-photo="off"] .profile-photo { display: none; }
   .hero { padding: 0 0 16px; background: none; }
   .section { padding: 18px 0; }
   .media-row { padding: 12px; margin-top: 14px; }
+  .media-row.four { grid-template-columns: repeat(4, minmax(0, 1fr)); padding: 12px; }
   .profile-photo { display: none; }
   body[data-photo="on"] .profile-photo { display: block; }
 }
